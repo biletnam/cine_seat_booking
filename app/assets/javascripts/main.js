@@ -8,7 +8,7 @@
  * Copyright 2015, Codrops
  * http://www.codrops.com
  */
-(function(window) {
+;(function(window) {
 
 	'use strict';
 
@@ -95,9 +95,6 @@
 		return m * currentVal + b;
 	}
 
-
-		console.log(document.querySelector(".container"));
-
 	var support = {transitions : Modernizr.csstransitions},
 		transEndEventNames = {'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend'},
 		transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
@@ -117,9 +114,9 @@
 			}
 		},
 		// main container
-		container = document.querySelector(".container"),
+		container = document.querySelector('.container'),
 		// the 3D element - the room
-		room = container.querySelector(".cube"),
+		room = container.querySelector('.cube'),
 		// the seat rows inside the 3D element
 		rows = [].slice.call(room.querySelectorAll('.rows > .row')),
 		// total amount of rows

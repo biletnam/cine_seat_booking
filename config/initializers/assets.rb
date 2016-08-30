@@ -16,5 +16,4 @@ Rails.application.config.assets.precompile += %w( component.css )
 Rails.application.config.assets.precompile += %w( modernizr-custom.js)
 Rails.application.config.assets.precompile += %w( classie.js )
 Rails.application.config.assets.precompile += %w( main.js )
-#Rails.application.config.assets.paths << "#{Rails.root}/app/assets/videos"
 

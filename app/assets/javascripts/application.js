@@ -11,6 +11,7 @@
 // about supported directives.
 //
 
+//= require modernizr-custom
 //= require classie
 //= require main
 
