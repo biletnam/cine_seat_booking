@@ -79,6 +79,8 @@
 					</div>
 					<div class="row">
 						<div data-seat="C1" class="row__seat"></div>
+
+
 						<div data-seat="C2" class="row__seat"></div>
 						<div data-seat="C3" class="row__seat"></div>
 						<div data-seat="C4" class="row__seat"></div>
@@ -405,24 +407,17 @@
 			<h3 class="plan__title">Seating Plan</h3>
 			<div class="rows rows--mini">
 				<div class="row">
-					<div class="row__seat tooltip" data-tooltip="A1"></div>
-					<div class="row__seat tooltip" data-tooltip="A2"></div>
-					<div class="row__seat tooltip" data-tooltip="A3"></div>
-					<div class="row__seat tooltip" data-tooltip="A4"></div>
-					<div class="row__seat tooltip" data-tooltip="A5"></div>
-					<div class="row__seat tooltip" data-tooltip="A6"></div>
-					<div class="row__seat tooltip" data-tooltip="A7"></div>
-					<div class="row__seat tooltip" data-tooltip="A8"></div>
-					<div class="row__seat tooltip" data-tooltip="A9"></div>
-					<div class="row__seat row__seat--reserved"></div>
-					<div class="row__seat row__seat--reserved"></div>
-					<div class="row__seat row__seat--reserved"></div>
-					<div class="row__seat tooltip" data-tooltip="A13"></div>
-					<div class="row__seat tooltip" data-tooltip="A14"></div>
-					<div class="row__seat tooltip" data-tooltip="A15"></div>
-					<div class="row__seat tooltip" data-tooltip="A16"></div>
-					<div class="row__seat tooltip" data-tooltip="A17"></div>
-					<div class="row__seat tooltip" data-tooltip="A18"></div>
+
+
+				<% @b.each do |x| %>
+
+					<% if x %>
+						<div class= "row__seat tooltip" ></div>
+					<%else%>
+						<div class= "row__seat row__seat--reserved"> </div>
+					<%end%>	
+
+				<% end %>
 				</div>
 				<div class="row">
 					<div class="row__seat tooltip" data-tooltip="B1"></div>
