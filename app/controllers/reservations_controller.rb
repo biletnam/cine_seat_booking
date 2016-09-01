@@ -1,11 +1,12 @@
 class ReservationsController < ApplicationController
   
   def index
-  	a=[true, false]
-  	#a=['row__seat tooltip','row__seat row__seat--reserved']
-  	@b= []
-  	a.cycle(9){|x| @b.append(x)}
-
+  	#@reservations = Reservation.all
+  	
+  	@b= Reservation.all.pluck(:reserved)
+  	#puts a
+  	#@b= []
+  	#a.cycle(9){|x| @b.append(x)}
   end
 
   def create
