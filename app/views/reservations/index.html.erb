@@ -407,15 +407,12 @@
 			<h3 class="plan__title">Seating Plan</h3>
 			<div class="rows rows--mini">
 				<div class="row">
-
-
 				<% @b.each do |x| %>
 					<% if x %>
 						<div class= "row__seat tooltip" ></div>
 					<%else%>
 						<div class= "row__seat row__seat--reserved"> </div>
-					<%end%>	
-
+					<%end%>
 				<% end %>
 				</div>
 				<div class="row">
