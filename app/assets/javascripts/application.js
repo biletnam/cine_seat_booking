@@ -12,7 +12,8 @@
 //
 
 //= require modernizr-custom
-//= require classie
-//= require main
-
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require_tree .
 
