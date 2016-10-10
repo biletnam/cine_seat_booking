@@ -1,0 +1,20 @@
+<div class="container">
+<h4>New Booking</h4>
+<% if user_signed_in? %>
+	<%= form_for @booking do |f| %>
+		<div class="form-field">
+    		<%= f.label :film_id %><br />
+    		<%= f.collection_select :film_id, Film.order(:name), :id, :name, include_blank: true%>
+  		</div>
+		<div class="form-field">
+    		<%= f.label :show_id, "Shows" %><br />
+    		<%= f.grouped_collection_select :show_id, Film.order(:name), :shows, :name, :id, :time, include_blank: true %>
+  		</div>
+  		<%= link_to "Book Now", reservations_index_path, :class => 'btn btn-primary' %> 
+  	<% end %>
+<%else%>
+  <p>Please <%= link_to "Login",  new_user_session_path %> to book your seat.</p>
+<%end%>
+
+</div>
+</div>

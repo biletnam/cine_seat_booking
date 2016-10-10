@@ -1,12 +1,12 @@
-<h2>Log in</h2>
+<h4>Log in</h4>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+  <div class="input-field col s6">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
-  <div class="field">
+  <div class="input-field col s6">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
@@ -19,7 +19,8 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+     <button class="btn waves-effect waves-light" type="submit" name="action"><%= f.submit "Log in" %>
+  </button>
   </div>
 <% end %>
 

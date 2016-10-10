@@ -4,14 +4,28 @@
 		
 		<title>Perspective Seat Preview</title>
 		<%= stylesheet_link_tag    'application', media: 'all' %>
-
 		<%= javascript_include_tag 'modernizr-custom' %>
-		<%#= javascript_include_tag 'classie' %>
-		<%#= javascript_include_tag 'main'%>
 		<%= csrf_meta_tags %>
 	</head>
+<nav>
 
+    <div class="navbar navbar-inverse navbar-fixed-top">
+   
+    	<%= link_to image_tag("logo.png", :alt => "logo" ,  :height => 30, class:"brand-logo center"), "/" %>
+      <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item">
+        <% if user_signed_in? %>
+  <%= link_to "Book Your Seat", new_booking_path %></li>
+  <li class="nav-item">
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+<% else %>
+ <li class="nav-item"><%= link_to "Log In", new_user_session_path %></li>
+<% end %>
+      </ul>
+  </nav>
+        
 	<body>
+
 		<p class="notice"><%= notice %></p>
        	<p class="alert"><%= alert %></p>
 
@@ -20,6 +34,7 @@
 
 
 		<%= javascript_include_tag 'application' %>
-	
+
+
 	</body>
 </html>

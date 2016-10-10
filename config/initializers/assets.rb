@@ -13,7 +13,12 @@ Rails.application.config.assets.precompile << /\.(?:png|jpg|jpeg|gif)\z/
 Rails.application.config.assets.precompile += %w( normalize.css )
 Rails.application.config.assets.precompile += %w( demo.css )
 Rails.application.config.assets.precompile += %w( component.css )
+#Rails.application.config.assets.precompile += %w( materialize.scss )
+
 Rails.application.config.assets.precompile += %w( modernizr-custom.js)
 Rails.application.config.assets.precompile += %w( classie.js )
 Rails.application.config.assets.precompile += %w( main.js )
+#Rails.application.config.assets.precompile += %w( materialize.js )
+
+
 

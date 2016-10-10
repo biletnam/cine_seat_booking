@@ -11,8 +11,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'modernizr-rails'
+gem 'rails_admin'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise', '~> 4.2'
 gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'jquery-turbolinks'
 group :development, :test do
   gem 'byebug'
 end
